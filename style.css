@@ -1,0 +1,138 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --des-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --content-padding: 0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.text-content {
+    padding:  20px 40px;
+    text-align: center;
+}
+
+.text-content h2 {
+    color: var(--dark-blue);
+    margin-bottom: var(--content-padding);
+}
+
+.text-content p {
+    color: var(--des-blue);
+    font-size: 15px;
+    margin-bottom: var(--content-padding);
+}
+
+.plan-box-left div {
+    margin-left: 10px;
+}
+
+.plan-box-left p {
+    font-size: 14px;
+    color: var(--des-blue);
+}
+
+.plan-box {
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--content-padding);
+}
+
+.plan-box a:hover {
+    text-decoration: none;
+    color: var(--bright-blue);
+}
+
+.plan-box-left {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 100%;
+    padding: var(--content-padding);
+    color: white;
+    background-color: var(--bright-blue);
+    border: 0;
+    border-radius: 10px;
+    font-weight: 900;
+    margin: 30px 0;
+    box-shadow: 10px;
+}
+
+.button:hover {
+    background-color: var(--des-blue);
+    transition: background-color 1s ease;
+}
+
+.cancel {
+    text-decoration: none;
+    color: var(--des-blue);
+    font-weight: 900;
+}
+
+.cancel:hover {
+    color: var(--bright-blue);
+}
+
+@media only screen and (max-width: 425px){
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 12px;
+    }
+    
+    .container {
+        max-width: 85%;
+    }
+
+    .plan-box {
+        padding: 12px;
+    }
+
+    .plan-box-left {
+       
+    }
+
+    .plan-box-left img {
+        width: 2em;
+    }
+
+    .annual {
+        font-size: 12px;
+    }
+
+    .annual-1 {
+        font-size: 8px;
+    }
+}
